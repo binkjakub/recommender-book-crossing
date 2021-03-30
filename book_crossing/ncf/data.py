@@ -89,6 +89,9 @@ class BookCrossingDM(LightningDataModule):
         ratings = self._load_ratings()
         ratings = self._filter_ratings(ratings)
         print(f"#users: {ratings['User-ID'].nunique()}, #items: {ratings['ISBN'].nunique()}")
+        print(f"#interactions: {len(ratings)}")
+        print("sparsity: "
+              f"{len(ratings) / (ratings['User-ID'].nunique() * ratings['ISBN'].nunique()) :0.3f}")
         ratings = self._to_implicit_feedback(ratings)
         train_ratings, test_ratings = self._split_leave_one_out(ratings)
 
