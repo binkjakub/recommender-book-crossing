@@ -7,3 +7,5 @@ pycountry
 click
 pytorch-lightning
 wandb
+torchmetrics
+scikit-learn
