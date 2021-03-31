@@ -4,3 +4,8 @@ seaborn
 scipy
 lightfm
 pycountry
+click
+pytorch-lightning
+wandb
+torchmetrics
+scikit-learn
